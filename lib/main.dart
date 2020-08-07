@@ -11,8 +11,10 @@ class _EjemploIfState extends State<EjemploIf> {
   void b (){
     setState(() {
       a++;
+      a>3?c=Colors.red:c=null;
     });
   }
+  Color c;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class _EjemploIfState extends State<EjemploIf> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text('$a', style: TextStyle(fontSize: 450, backgroundColor: null),),
+          Text('$a', style: TextStyle(fontSize: 450, backgroundColor: c),),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
