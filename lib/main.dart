@@ -7,34 +7,27 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List<Widget> a =[];
+  int a = 0;
   void b (){
     setState(() {
-      a.add(FlatButton(onPressed: (){}, color: Colors.deepOrange,));
+      a++;
     });
   }
 
-  void c(){
-    setState(() {
-      a.removeLast();
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.yellow,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SizedBox(height:20),
+          Text('$a', style: TextStyle(fontSize: 450, backgroundColor: null),),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FlatButton.icon(onPressed:(){b();},icon: Icon(Icons.add),label: Text("Agregar")),
-              FlatButton.icon(onPressed:(){c();},icon: Icon(Icons.remove),label: Text("Quitar")),
+              FlatButton.icon(onPressed:(){b();},icon: Icon(Icons.add),label: Text("Aumentar")),
             ],
           ),
-          Column(
-            children: a,
-          )
         ],
       ),
     );
