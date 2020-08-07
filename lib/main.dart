@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-void main() => runApp(MaterialApp(home:QuizPage()));
+void main() => runApp(MaterialApp(home:EjemploIf()));
 
-class QuizPage extends StatefulWidget {
+class EjemploIf extends StatefulWidget {
   @override
-  _QuizPageState createState() => _QuizPageState();
+  _EjemploIfState createState() => _EjemploIfState();
 }
 
-class _QuizPageState extends State<QuizPage> {
+class _EjemploIfState extends State<EjemploIf> {
   int a = 0;
   void b (){
     setState(() {
